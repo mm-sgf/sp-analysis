@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:background="#6C32EF"
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#fff"
+            android:text="@string/sp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <ImageButton
+            android:onClick="onCleanTree"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/icon_delete_database"
+            android:layout_marginEnd="10dp"
+            android:layout_width="34dp"
+            android:layout_height="34dp"/>
+
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/title_layout"
+        android:layout_above="@+id/activity_state_layout"
+        android:id="@+id/tree_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/activity_state_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <CheckBox
+            android:text="Resume"
+            android:id="@+id/state_resume"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+
+        <CheckBox
+            android:text="Paused"
+            android:checked="true"
+            android:id="@+id/state_pause"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+
+        <CheckBox
+            android:text="Stopped"
+            android:checked="true"
+            android:id="@+id/state_stopped"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+
+        <CheckBox
+            android:text="Destroyed"
+            android:checked="true"
+            android:id="@+id/state_destroyed"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

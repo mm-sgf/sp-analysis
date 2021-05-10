@@ -1,0 +1,3 @@
+include ':sp-analysis'
+include ':app'
+rootProject.name = "sp-analysis"
